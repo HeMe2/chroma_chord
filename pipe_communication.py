@@ -1,5 +1,23 @@
+"""
+Helper functions to read the ColorChord output from the named pipe and pack it into a usabale format for
+OpenRazer.
+
+Copyright (C) 2020 Henning Mende
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>. 
+"""
+
 import numpy
 from openrazer.client.fx import Frame
+
+__author__ = "Henning Mende"
+__copyright__ = "Copyright 2020, Chroma Chord"
+__licence__ = "GPL-3.0-or-later"
+__email__ = "github@skotax.de"
 
 pipe_name = "chroma_chord_pipe"
 
