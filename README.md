@@ -11,7 +11,7 @@ Once I encountered problems with an onboard soundcard, but since I'm not using t
 
 ## Important notice
 
-The current ColorChord master doesn't run in headless mode, thus you need to use an [older commit](https://github.com/cnlohr/colorchord/commit/9a89be3aa8ae366df85ecb9f8cb611ad202a416e). I'm on it, to make it work soon.
+The current ColorChord master doesn't run in headless mode, thus you need to use an [older commit](https://github.com/cnlohr/colorchord/commit/9a89be3aa8ae366df85ecb9f8cb611ad202a416e). I'm on it, to make it work soon. (https://github.com/cnlohr/colorchord/issues/110)
 
 ## Dependencies
 
