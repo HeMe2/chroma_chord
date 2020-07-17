@@ -1,5 +1,23 @@
 #!/usr/bin/python3
+"""
+Script to check the dependencies for chroma_chord.py and to create a shell script for application start, 
+that can be called from every location on the system.
+
+Copyright (C) 2020 Henning Mende
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>. 
+"""
+
 import os
+
+__author__ = "Henning Mende"
+__copyright__ = "Copyright 2020, Chroma Chord"
+__licence__ = "GPL-3.0-or-later"
+__email__ = "github@skotax.de"
 
 _wrong_platform_msg = """Error: Not on Linux platform.
 This software won't run on anything else than linux...
