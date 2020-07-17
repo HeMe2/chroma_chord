@@ -4,7 +4,11 @@ Computer audio to light conversion for Razer RGB keyboards on Linux.
 
 This software is intended to run permanently in the background, so it can grab all the audio played by the computer. Then it uses [ColorChord](https://github.com/cnlohr/colorchord) to convert this audio to colorful voronoi diagrams, which are then displayed on the RGB keys of your Razer keyboard using the [OpenRazer](https://openrazer.github.io/) Python API. After three seconds of silence (eg. no light on the keyboard) the "starlight" effect is set on the keyboard. On quit, the same effect is set.
 
-I created this as a quick draft two years ago. I wanted to beautify the code and the overall concept. But since it runs flawless on my machine every day, I never found the motivation to finally rework the code.
+[![video](https://img.youtube.com/vi/X4Xl8ggBxz4/0.jpg)](https://www.youtube.com/watch?v=X4Xl8ggBxz4)
+
+(Sorry for the shaky cam and the poor quality, some day I will create a better demonstration video.)
+
+I created Chroma Chord as a quick draft two years ago. I wanted to beautify the code and the overall concept. But since it runs flawless on my machine every day, I never found the motivation to finally rework the code.
 Now I decided to add some documentation and a handy dependency checker and start script creator and finally uplolad my butchered code.
 
 Once I encountered problems with an onboard soundcard, but since I'm not using this, I didn't dig into it. It works very well with the two USB soundcards (interfaces) I've got. And it worked well on my laptops onboard soundcard.
@@ -51,7 +55,6 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## To-Do:
 
-  - create video demonstration
   - dim brightness depending on sound amplitude, to get a better beat response
   - get rid of code TODOs
   - provide this functionality as a output device for colorchord
