@@ -95,7 +95,9 @@ if __name__ == "__main__":
         # chroma_chord_operation()
         print("start ColorChord 2")
 
-        colorchord_start = lambda: call(["./colorchord"] + ["chroma_chord_voronoi.conf"])  # TODO: fix this later
+        colorchord_start = lambda: call(
+            ["./colorchord"] + ["chroma_chord_voronoi.conf"]
+        )  # TODO: fix this later
         colorchord_thread = Thread(name="ChromaChord", target=colorchord_start)
         colorchord_thread.setDaemon(True)
         colorchord_thread.start()

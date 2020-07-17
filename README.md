@@ -52,5 +52,6 @@ You should have received a copy of the GNU General Public License along with thi
 ## To-Do:
 
   - create video demonstration
+  - dim brightness depending on sound amplitude, to get a better beat response
   - get rid of code TODOs
   - provide this functionality as a output device for colorchord

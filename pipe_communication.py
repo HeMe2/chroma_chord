@@ -34,7 +34,9 @@ def read_frames(iterations: int):
         val = pipe.read(LEDs * BYTES_PER_VAL)
         led_values = []
         for ints in range(0, LEDs * BYTES_PER_VAL, BYTES_PER_VAL):
-            rgb_as_one_num = int.from_bytes(val[ints:ints + BYTES_PER_VAL - 1], "big", signed=False)
+            rgb_as_one_num = int.from_bytes(
+                val[ints : ints + BYTES_PER_VAL - 1], "big", signed=False
+            )
 
             k = numpy.uint8((rgb_as_one_num & 0xFF000000) >> 24)
             r = numpy.uint8((rgb_as_one_num & 0x00FF0000) >> 16)
@@ -53,8 +55,10 @@ def print_as_frames(how_many: int, x: int = COLUMNS, y: int = ROWS):
         for line_num in range(ROWS):
             line_start_index = line_num * x
             line_end_index = line_start_index + y
-            print(frame[line_start_index: line_end_index])
-        print("-------------------------------------------------------------------------------------------------------")
+            print(frame[line_start_index:line_end_index])
+        print(
+            "-------------------------------------------------------------------------------------------------------"
+        )
 
 
 def read_razer_frames(number_of_frames: int = 1, pipe=None):
@@ -69,7 +73,9 @@ def read_razer_frames(number_of_frames: int = 1, pipe=None):
         cur_row = 0
         cur_col = 0
         for index in range(0, LEDs * BYTES_PER_VAL, BYTES_PER_VAL):
-            rgb_as_one_num = int.from_bytes(val[index:index + BYTES_PER_VAL - 1], "big", signed=False)
+            rgb_as_one_num = int.from_bytes(
+                val[index : index + BYTES_PER_VAL - 1], "big", signed=False
+            )
             r = numpy.uint8((rgb_as_one_num & 0xFF0000) >> 16)
             g = numpy.uint8((rgb_as_one_num & 0x00FF00) >> 8)
             b = numpy.uint8((rgb_as_one_num & 0x0000FF))

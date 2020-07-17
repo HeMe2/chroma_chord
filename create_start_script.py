@@ -36,8 +36,9 @@ sourcename = <device_name>
 to chroma_chord_voronoi.conf"""
 
 
-def check_platform()->bool:
+def check_platform() -> bool:
     import platform
+
     if platform.system() == "Linux":
         return True
     else:
@@ -70,7 +71,9 @@ def check_sourcename() -> bool:
     sourcename_configured = False
     with open("chroma_chord_voronoi.conf", "r") as conf_file:
         for line in conf_file:
-            if (not (line.find("sourcename") == -1)) and (line.find("#sourcename") == -1):
+            if (not (line.find("sourcename") == -1)) and (
+                line.find("#sourcename") == -1
+            ):
                 # line contains "sourcename" but not "#sourcename" (which is a comment)
                 sourcename_configured = True
     if not sourcename_configured:
@@ -89,13 +92,15 @@ def check_dependencies() -> bool:
 
 def create_script(filename: str):
     absolute_path = os.path.abspath(".")
-    script_str = ("#!/usr/bin/env bash\n"
-                  "# enter the directory with colorchord\n"
-                  "cd {}\n"
-                  "# create the named pipe if it doesn't exist\n"
-                  "test -e chroma_chord_pipe || mkfifo chroma_chord_pipe\n"
-                  "# execute chroma_chord\n"
-                  "./chroma_chord.py").format(absolute_path)
+    script_str = (
+        "#!/usr/bin/env bash\n"
+        "# enter the directory with colorchord\n"
+        "cd {}\n"
+        "# create the named pipe if it doesn't exist\n"
+        "test -e chroma_chord_pipe || mkfifo chroma_chord_pipe\n"
+        "# execute chroma_chord\n"
+        "./chroma_chord.py"
+    ).format(absolute_path)
 
     with open(filename, "w") as script:
         script.writelines(script_str)
@@ -103,7 +108,7 @@ def create_script(filename: str):
     print(filename, "created!")
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     if check_dependencies():
         print("All dependencies satisfied!")
         create_script("start_chroma_chord.sh")
