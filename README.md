@@ -13,10 +13,6 @@ Now I decided to add some documentation and a handy dependency checker and start
 
 Once I encountered problems with an onboard soundcard, but since I'm not using this, I didn't dig into it. It works very well with the two USB soundcards (interfaces) I've got. And it worked well on my laptops onboard soundcard.
 
-## Important notice
-
-The current ColorChord master doesn't run in headless mode, thus you need to use an [older commit](https://github.com/cnlohr/colorchord/commit/9a89be3aa8ae366df85ecb9f8cb611ad202a416e). I'm on it, to make it work soon. (https://github.com/cnlohr/colorchord/issues/110)
-
 ## Dependencies
 
   - Linux
@@ -25,7 +21,6 @@ The current ColorChord master doesn't run in headless mode, thus you need to use
   - [ColorChord](https://github.com/cnlohr/colorchord)
     - clone project with: `git clone --recursive https://github.com/cnlohr/colorchord`
     - `cd colorchord/colorchord2`
-    - `git checkout 9a89be3aa8ae366df85ecb9f8cb611ad202a416e` (Hopefully this step won't be needed in future)
     - `make`
 
 ## How to Chroma Chord
